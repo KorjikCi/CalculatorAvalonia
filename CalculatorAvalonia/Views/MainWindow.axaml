@@ -12,6 +12,37 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+    <Grid RowDefinitions="1* 3*">
+        <TextBlock Grid.Row="0" 
+                   Text="0"/>
+        
+        <UniformGrid Grid.Row="1" Columns="4">
+            
+            <Button Content="R"/>
+            <Button Content="Del"/>
+            <Button Content="C"/>
+            <Button Content="/"/>
+            
+            <Button Content="7"/>
+            <Button Content="8"/>
+            <Button Content="9"/>
+            <Button Content="*"/>
+            
+            <Button Content="4"/>
+            <Button Content="5"/>
+            <Button Content="6"/>
+            <Button Content="-"/>
+            
+            <Button Content="1"/>
+            <Button Content="2"/>
+            <Button Content="3"/>
+            <Button Content="+"/>
+            
+            <Button Content="+/-"/>
+            <Button Content="0"/>
+            <Button Content="."/>
+            <Button Content="="/>
+        </UniformGrid>
+    </Grid>
 
 </Window>
