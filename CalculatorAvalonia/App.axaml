@@ -18,6 +18,7 @@
                                                                             по центру горизонтально-->
             <Setter Property="VerticalContentAlignment" Value="Center"/> <!-- Выравниваем Текст внутри кнопок 
                                                                             по центру вертикально-->
+            <Setter Property="FontSize" Value="20"/> <!-- Размер шрифта-->
         </Style>
         
         <Style Selector="TextBlock.DisplayBlock"> <!-- Задаем стиль для нашего "дисплея", окна вывода информации-->
