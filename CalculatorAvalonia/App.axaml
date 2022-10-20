@@ -32,7 +32,9 @@
             <Setter Property="Background" Value="#222222"/>
         </Style> 
         
-        
+        <Style Selector="Button.OperationButton:pointerover /template/ ContentPresenter">
+            <Setter Property="Background" Value="#333333"/>
+        </Style>
         
     </Application.Styles>
 </Application>
