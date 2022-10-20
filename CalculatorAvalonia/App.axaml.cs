@@ -1,6 +1,7 @@
 using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using CalculatorAvalonia.Models;
 using CalculatorAvalonia.ViewModels;
 using CalculatorAvalonia.Views;
 
@@ -19,7 +20,7 @@ namespace CalculatorAvalonia
             {
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainWindowViewModel(),
+                    DataContext = new MainWindowViewModel(new DanglCalculator()),
                 };
             }
 

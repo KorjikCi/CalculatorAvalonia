@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using CalculatorAvalonia.Models;
 using Prism.Commands;
 using ReactiveUI;
 
@@ -6,10 +7,12 @@ namespace CalculatorAvalonia.ViewModels
 {
     public class MainWindowViewModel : ViewModelBase
     {
+        private readonly ICalculator _calculator;
         private string _displayText = "0";
 
-        public MainWindowViewModel()
+        public MainWindowViewModel(DanglCalculator calculator)
         {
+            _calculator = calculator;
             SetInputSymbolCommand = new DelegateCommand<string?>(SetSymbol);
             CalcCommand = new DelegateCommand(OnCalc);
             ClearLastCommand = new DelegateCommand(OnClearLastSymbol);
@@ -18,7 +21,7 @@ namespace CalculatorAvalonia.ViewModels
 
         private void OnCalc()
         {
-            DisplayText = "Result";
+            DisplayText = _calculator.Calculate(DisplayText);
         }
 
         private void OnClearLastSymbol()
@@ -39,6 +42,9 @@ namespace CalculatorAvalonia.ViewModels
             DisplayText = "0";
         }
 
+        
+        
+        
         public string DisplayText
         {
             get => _displayText;
