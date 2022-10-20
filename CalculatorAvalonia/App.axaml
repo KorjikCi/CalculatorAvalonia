@@ -37,5 +37,9 @@
             <Setter Property="Background" Value="#333333"/>
         </Style>
         
+        <Style Selector="Button.SymbolButton">
+            <Setter Property="Command" Value="{Binding SetInputSymbolCommand}"/>
+            <Setter Property="CommandParameter" Value="{Binding $self.Content}"/>
+        </Style>
     </Application.Styles>
 </Application>

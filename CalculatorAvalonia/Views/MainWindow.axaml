@@ -21,9 +21,12 @@
     </Design.DataContext>
 
     <Grid RowDefinitions="1* 3*">
-        <TextBlock Grid.Row="0" Classes="DisplayBlock"
+        <ScrollViewer Grid.Row="0" 
+                      HorizontalScrollBarVisibility="Disabled"
+                      VerticalScrollBarVisibility="Auto">
+        <TextBlock Classes="DisplayBlock"
                    Text="{Binding DisplayText}"/>
-        
+        </ScrollViewer>
         <UniformGrid Grid.Row="1" Columns="4"
                      Name="ButtonsGrid">
             
@@ -44,23 +47,23 @@
             <Button Content="C" Classes="OperationButton"/>
             <Button Content="/" Classes="OperationButton"/>
             
-            <Button Content="7"/>
-            <Button Content="8"/>
-            <Button Content="9"/>
+            <Button Content="7" Classes="SymbolButton"/>
+            <Button Content="8" Classes="SymbolButton"/>
+            <Button Content="9" Classes="SymbolButton"/>
             <Button Content="*" Classes="OperationButton"/>
             
-            <Button Content="4"/>
-            <Button Content="5"/>
-            <Button Content="6"/>
+            <Button Content="4" Classes="SymbolButton"/>
+            <Button Content="5" Classes="SymbolButton"/>
+            <Button Content="6" Classes="SymbolButton"/>
             <Button Content="-" Classes="OperationButton"/>
             
-            <Button Content="1"/>
-            <Button Content="2"/>
-            <Button Content="3"/>
+            <Button Content="1" Classes="SymbolButton"/>
+            <Button Content="2" Classes="SymbolButton"/>
+            <Button Content="3" Classes="SymbolButton"/>
             <Button Content="+" Classes="OperationButton"/>
             
             <Button Content="+/-"/>
-            <Button Content="0"/>
+            <Button Content="0" Classes="SymbolButton"/>
             <Button Content="."/>
             <Button Content="=" Classes="accent"/>
         </UniformGrid>
