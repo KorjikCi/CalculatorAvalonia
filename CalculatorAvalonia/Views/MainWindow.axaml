@@ -31,7 +31,7 @@
                      Name="ButtonsGrid">
             
             <Button Content="R" Classes="OperationButton"/>
-            <Button Classes="OperationButton">
+            <Button Classes="OperationButton" Command="{Binding ClearLastCommand}">
                 <Button.Content>
                     <Path Fill="{Binding $parent[Button].Foreground}" 
                           Stretch="Uniform"
@@ -44,28 +44,28 @@
                     </Path>
                 </Button.Content>
             </Button>  
-            <Button Content="C" Classes="OperationButton"/>
-            <Button Content="/" Classes="OperationButton"/>
+            <Button Content="C" Classes="OperationButton" Command="{Binding AllClearCommand}"/>
+            <Button Content="/" Classes="OperationButton SymbolButton"/>
             
             <Button Content="7" Classes="SymbolButton"/>
             <Button Content="8" Classes="SymbolButton"/>
             <Button Content="9" Classes="SymbolButton"/>
-            <Button Content="*" Classes="OperationButton"/>
+            <Button Content="*" Classes="OperationButton SymbolButton"/>
             
             <Button Content="4" Classes="SymbolButton"/>
             <Button Content="5" Classes="SymbolButton"/>
             <Button Content="6" Classes="SymbolButton"/>
-            <Button Content="-" Classes="OperationButton"/>
+            <Button Content="-" Classes="OperationButton SymbolButton"/>
             
             <Button Content="1" Classes="SymbolButton"/>
             <Button Content="2" Classes="SymbolButton"/>
             <Button Content="3" Classes="SymbolButton"/>
-            <Button Content="+" Classes="OperationButton"/>
+            <Button Content="+" Classes="OperationButton SymbolButton"/>
             
             <Button Content="+/-"/>
             <Button Content="0" Classes="SymbolButton"/>
-            <Button Content="."/>
-            <Button Content="=" Classes="accent"/>
+            <Button Content="." Classes="SymbolButton"/>
+            <Button Content="=" Classes="accent" Command="{Binding CalcCommand}"/>
         </UniformGrid>
     </Grid>
 
