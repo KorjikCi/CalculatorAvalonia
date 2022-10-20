@@ -9,14 +9,30 @@
     <Application.Styles>
         <FluentTheme Mode="Dark"/>
         
-        <Style Selector="UniformGrid > Button">
-            <Setter Property="HorizontalAlignment" Value="Stretch"></Setter>
-            <Setter Property="VerticalAlignment" Value="Stretch"></Setter>
-            <Setter Property="Margin" Value="1"></Setter>
-            <Setter Property="CornerRadius" Value="6"></Setter>
-            <Setter Property="HorizontalContentAlignment" Value="Center"></Setter>
-            <Setter Property="VerticalContentAlignment" Value="Center"></Setter>
+        <Style Selector="#ButtonsGrid > Button"> <!-- Задаем стили для наших кнопок калькулятора-->
+            <Setter Property="HorizontalAlignment" Value="Stretch"/><!-- Горизантальное выравнивание-->
+            <Setter Property="VerticalAlignment" Value="Stretch"/><!-- Вертикальное-->
+            <Setter Property="Margin" Value="1"/> <!-- Отступ, чтобы кнопки не слипались-->
+            <Setter Property="CornerRadius" Value="6"/> <!-- Небольшое скругление кнопок-->
+            <Setter Property="HorizontalContentAlignment" Value="Center"/> <!-- Выравниваем Текст внутри кнопок 
+                                                                            по центру горизонтально-->
+            <Setter Property="VerticalContentAlignment" Value="Center"/> <!-- Выравниваем Текст внутри кнопок 
+                                                                            по центру вертикально-->
         </Style>
+        
+        <Style Selector="TextBlock.DisplayBlock"> <!-- Задаем стиль для нашего "дисплея", окна вывода информации-->
+            <Setter Property="FontSize" Value="40"/> <!-- Шрифт текста-->
+            <Setter Property="TextAlignment" Value="Right"/> <!-- Выравнивание -->
+            <Setter Property="VerticalAlignment" Value="Bottom"/> <!-- Вертикальнео выравнивание -->
+            <Setter Property="Margin" Value="4"/> <!-- Отступ-->
+            <Setter Property="TextWrapping" Value="Wrap"/> <!-- Перенос текста при заполнении пространства-->
+        </Style>
+        
+        <Style Selector="Button.OperationButton"> <!-- Определим стиль для наших кнопок с операциями-->
+            <Setter Property="Background" Value="#222222"/>
+        </Style> 
+        
+        
         
     </Application.Styles>
 </Application>
