@@ -6,7 +6,15 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CalculatorAvalonia.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="CalculatorAvalonia">
+        
+        Title="CalculatorAvalonia"
+        
+        MinWidth="350" MinHeight="480"
+        Width="380" Height="500"
+        WindowStartupLocation="CenterScreen"
+        >
+    
+        
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>

@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="CalculatorAvalonia/App.axaml" value="CalculatorAvalonia/CalculatorAvalonia.csproj" />
         <entry key="CalculatorAvalonia/Views/MainWindow.axaml" value="CalculatorAvalonia/CalculatorAvalonia.csproj" />
       </map>
     </option>
